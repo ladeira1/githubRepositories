@@ -17,6 +17,8 @@ export const Container = styled.label<ContainerProps>`
   display: flex;
   align-items: center;
 
+  position: relative;
+
   background: ${({ theme }) => theme.colors.secondary};
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -34,12 +36,29 @@ export const Container = styled.label<ContainerProps>`
     font-weight: ${({ isSelected, theme }) => (isSelected ? theme.fontWeight.semiBold : theme.fontWeight.regular)};
 
     border: none;
-
     outline: none;
 
     &::placeholder {
       color: ${({ theme }) => theme.colors.textSecondary};
     }
+
+    &:focus + p, &:not(:placeholder-shown) + p {
+      transform: translateY(-1.25rem);
+      font-size: 0.85rem;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  p {
+    position: absolute;
+    left: 5.4rem;
+
+    transition: font-size 0.15s, transform 0.15s;
+
+    color: ${({ theme }) => theme.colors.textSecondary};
   }
 `;
 

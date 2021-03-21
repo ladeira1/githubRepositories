@@ -35,9 +35,11 @@ export const InputText: FC<InputTextProps> = ({
         id="value"
         type="text"
         placeholder={placeholder}
+        autoComplete="off"
         value={value}
         onChange={event => onUsernameChange(event.target.value)}
       />
+      <p>{placeholder}</p>
     </Container>
   );
 };
