@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Header } from './components/Header';
 import { Search } from './components/pages/Search';
 import { GlobalStyle } from './styles/global';
 import { dark } from './styles/themes/dark';
@@ -10,8 +11,13 @@ type Theme = 'dark' | 'light';
 export const App: FC = () => {
   const [theme, setTheme] = useState<Theme>('dark');
 
+  function handleThemeChange(newTheme: Theme) {
+    setTheme(newTheme);
+  }
+
   return (
     <ThemeProvider theme={theme === 'dark' ? dark : light}>
+      <Header theme={theme} onThemeChange={handleThemeChange} />
       <Search />
       <GlobalStyle />
     </ThemeProvider>

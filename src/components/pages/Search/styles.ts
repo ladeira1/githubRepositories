@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 95vw;
+  max-width: 1300px;
+  height: 90vh;
 
-  background-color: ${props => props.theme.color.background};
+  margin: 0 auto;
+
+  background-color: ${props => props.theme.colors.background};
 `;

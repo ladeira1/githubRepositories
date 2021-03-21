@@ -1,6 +1,6 @@
 export const light = {
   name: 'light',
-  color: {
+  colors: {
     background: '#f4f7fa',
     primary: 'rgba(255, 255, 255, 0.95)',
     secondary: '#ececec',
@@ -11,7 +11,9 @@ export const light = {
     textTitle: '#262727',
     whitePure: '#fff',
   },
-  fonts: ['Montserrat', 'sans-serif'],
+  fonts: {
+    primary: 'montserrat',
+  },
   fontWeight: {
     regular: 400,
     semiBold: 600,
