@@ -60,7 +60,7 @@ export const Header: FC<HeaderProps> = ({ theme, onThemeChange }) => {
                     {theme === 'dark' ? (
                       <FiCheckCircle size={20} color={colors.red} />
                     ) : (
-                      <FiCircle size={20} color={colors.whitePure} />
+                      <FiCircle size={20} color={colors.text} />
                     )}
                     <p>dark</p>
                   </label>
@@ -75,7 +75,7 @@ export const Header: FC<HeaderProps> = ({ theme, onThemeChange }) => {
                     {theme === 'light' ? (
                       <FiCheckCircle size={20} color={colors.red} />
                     ) : (
-                      <FiCircle size={20} color={colors.whitePure} />
+                      <FiCircle size={20} color={colors.text} />
                     )}
                     <p>light</p>
                   </label>

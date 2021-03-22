@@ -75,7 +75,6 @@ export const Items = styled.div`
   right: 0rem;
 
   width: 20rem;
-  /* height: 15vh; */
 
   background: ${({ theme }) => darken(0.05, theme.colors.secondary)};
   border-radius: 0.75rem;

@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Header } from './components/Header';
-import { Search } from './components/pages/Search';
+import { Routes } from './routes';
 import { GlobalStyle } from './styles/global';
 import { dark } from './styles/themes/dark';
 import { light } from './styles/themes/light';
@@ -18,7 +18,7 @@ export const App: FC = () => {
   return (
     <ThemeProvider theme={theme === 'dark' ? dark : light}>
       <Header theme={theme} onThemeChange={handleThemeChange} />
-      <Search />
+      <Routes />
       <GlobalStyle />
     </ThemeProvider>
   );
