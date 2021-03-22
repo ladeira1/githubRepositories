@@ -95,6 +95,10 @@ export const Items = styled.div`
     :not(:first-child) {
       margin-top: 1.25rem;
     }
+
+    a {
+      text-decoration: none;
+    }
   }
 `;
 

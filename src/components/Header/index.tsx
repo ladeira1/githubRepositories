@@ -1,4 +1,5 @@
 import { FC, useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ThemeContext } from 'styled-components';
 import { FiGithub, FiCheckCircle, FiCircle } from 'react-icons/fi';
 import {
@@ -43,7 +44,9 @@ export const Header: FC<HeaderProps> = ({ theme, onThemeChange }) => {
           {isOpen && (
             <Items>
               <div>
-                <h3>Check another account</h3>
+                <Link to="/">
+                  <h3>Check another account</h3>
+                </Link>
                 <Redline />
               </div>
               <div>
