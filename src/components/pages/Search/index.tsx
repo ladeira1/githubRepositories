@@ -16,7 +16,9 @@ export const Search: FC = () => {
 
   function handleSearchForUser(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    history.push(`/user/${username}`, { username });
+    setTimeout(() => {
+      history.push(`/user/${username}`, { username });
+    }, 200);
   }
 
   return (
