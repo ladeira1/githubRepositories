@@ -1,10 +1,13 @@
 import { FC, FormEvent, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import { useHistory } from 'react-router-dom';
 import { Button } from '../../Button';
 import { InputText } from '../../InputText';
 import { Container } from './styles';
 
 export const Search: FC = () => {
+  const history = useHistory();
+
   const [username, setUsername] = useState('');
 
   function handleUsernameChange(newUsername: string) {
@@ -13,6 +16,7 @@ export const Search: FC = () => {
 
   function handleSearchForUser(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    history.push(`/user/${username}`, { username });
   }
 
   return (
